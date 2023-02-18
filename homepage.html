@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="page">
+        <div class="navigation"> 
+            <!--name of the site-->
+        <div class="title">
+            <h2 style="color: turquoise;">ジャワ JAVAN </h2>
+        </div>
+
+         <!--Buttons for login and signup-->
+            <nav>
+                <ul id="login">
+                    <li><button class = "logbtn" onclick="document.getElementById('loginform').style.display='block'" style="width: auto;">LogIn</button></li>
+                    <li><button class = "logbtn" onclick="document.getElementById('signupform').style.display='block'" style="width: auto;">SignUp</button></li>
+                </ul>
+            </nav>
+        </div>
+       
+
+        <!--Login form-->
+        <div class="formbox" id="loginform">
+            <div class="buttonbox">
+                <div id="btn"></div>
+            </div>
+            <div class="loginform">
+                <h3>LogIn</h3>
+                <form action="login.php" id="login" class="details" method="post">
+                    <label for="useremail">Email</label><br>
+                    <input type="email" name="email" id="useremail" class="inputfield" placeholder="Enter your Email" required><br>
+                    <label for="userpassword">Password</label><br>
+                    <input type="password" name="password" id="userpassword" class="inputfield" placeholder="Input your password" required><br>
+                    <input type="checkbox" class="checkbox">
+                    <span>Remember Password</span><br>
+                    <button type="submit" class="submitbtn"> Login</button>
+                </form>
+            </div>
+        </div>
+            <!--Signup form-->
+        <div class="formbox" id="signupform">
+            <div class="buttonbox">
+                <div id="btn"></div>
+            </div>
+            <div class="signupform">
+                <form action="#" id="signup" class="personal_details">
+                    <input type="text" class="inputfield" name="firstname" placeholder="Enter your FirstName" required><br>
+                    <input type="text" class="inputfield" name="secondname" placeholder="Enter your SecondName" required><br>
+                    <input type="tel" class="inputfield" name="phonenumber" placeholder="Enter your PhoneNumber" required><br>
+                    <input type="text" class="inputfield" name="idNumber" placeholder="Enter your IdNumber" required><br>
+                    <input type="email" class="inputfield" name="email" placeholder="Enter your Email" required><br>
+                    <input type="password" class="inputfield" name="password" placeholder="Enter a Password" required><br>
+                    <input type="password" class="inputfield" name="password" placeholder="confirm your Password" required><br>
+                    <input type="checkbox" class="checkbox"><span>I agree to the terms and conditions</span><br>
+                    <button type="submit" class="submitbtn">Signup</button>
+                </form>
+            </div>
+        </div>
+    </div>
+     <!---->
+    <script>
+        var modal=document.getElementById('loginform');
+        window.onclick=function(event)
+        {
+            if(event.target==modal){
+                modal.style.display="none";
+            }
+        }
+    </script>
+
+<script>
+    var modal=document.getElementById('signupform');
+    window.onclick=function(event)
+    {
+        if(event.target==modal){
+            modal.style.display="none";
+        }
+    }
+</script>
+</body>
+</html>
